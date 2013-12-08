@@ -658,7 +658,7 @@ jQuery(document).ready(function() {
     if( jQuery('article').hasClass('hentry') )
     {
         // strip trailing / for g+ api to find post, plus one button seems to omit it
-        $tmp = jQuery(location).attr('href');
+        tmp = jQuery(location).attr('href');
         if (tmp.endsWith('/')) {
             tmp = tmp.substr(0, tmp.length - 1);
         }
