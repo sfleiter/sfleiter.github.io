@@ -657,7 +657,12 @@ jQuery(document).ready(function() {
     //$post_domain = document.domain;
     if( jQuery('article').hasClass('hentry') )
     {
-        $post_link = encodeURI(jQuery(location).attr('href'));
+        // strip trailing / for g+ api to find post, plus one button seems to omit it
+        tmp = jQuery(location).attr('href');
+        if (tmp.endsWith('/') {
+            tmp = tmp.substr(0, $tmp.length - 1);
+        }
+        $post_link = encodeURI(tmp);
         $gp_url = jQuery('.googleplus h1 a').attr('href');
         $google_plus_id = $gp_url.split('/')[3].split('?')[0] ;
 
