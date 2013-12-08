@@ -659,7 +659,7 @@ jQuery(document).ready(function() {
     {
         // strip trailing / for g+ api to find post, plus one button seems to omit it
         tmp = jQuery(location).attr('href');
-        if (tmp.endsWith('/') {
+        if (tmp.endsWith('/')) {
             tmp = tmp.substr(0, $tmp.length - 1);
         }
         $post_link = encodeURI(tmp);
